@@ -1,0 +1,64 @@
+html {
+	background-attachment: fixed;
+	background-color: rgba(111,174,215,.9);
+	background-image: url("../images/scrabble_background_color.png");
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	color:#3F1A08;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 16px;
+}
+
+
+h1 {
+	text-align: center;
+	background-color: rgba(111,174,215,.9);
+	font-size: 72px;
+	border-radius: 15px;
+	display: inline-block; 
+	margin: auto;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
+
+
+a {
+	color:#3F1A08;
+	background-color: rgba(111,174,215,.9);
+	text-align: center;
+	font-size: 32px;
+	border-radius: 15px;
+	display: inline-block; 
+	margin: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	text-decoration: none
+}
+
+.word-girl {
+	display: inline-block;
+	padding-left: 35%;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	width: 50%;
+	height: 50%;
+}
+
+form label {
+	background-color: rgba(111,174,215,.9);
+	text-align: center;
+	border-radius: 15px; 
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}

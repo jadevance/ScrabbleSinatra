@@ -1,0 +1,14 @@
+  <h1>Score One Word</h1>
+
+  <form action="" method="post" accept-charset="utf-8">
+    <label for="scoring">Enter a word: </label>
+    <input type="text" name="word" value="" id="scoring" required pattern="[A-Za-z]{1,7}" title="Enter up to 7 letters">
+    <input type="submit" value="Submit">
+  </form>
+
+<% if @score %>
+<h2>
+  Word: <%= @word.upcase %> <br>
+  Score: <%= @score %>
+</h2>
+<% end %>
