@@ -2,6 +2,7 @@ require 'sinatra'
 require_relative './lib/scoring.rb'
 
 class Scrabble < Sinatra::Base		
+	set :bind, '0.0.0.0'
 	
 	def get_score(word)
 		score = Scoring.score(word)

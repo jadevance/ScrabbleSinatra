@@ -1,6 +1,5 @@
 html {
 	background-attachment: fixed;
-	background-color: rgba(111,174,215,.9);
 	background-image: url("../images/scrabble_background_color.png");
 	background-position: center; 
 	background-repeat: no-repeat; 
@@ -14,50 +13,142 @@ html {
 }
 
 
-h1 {
-	text-align: center;
+h1.banner {
 	background-color: rgba(111,174,215,.9);
-	font-size: 72px;
 	border-radius: 15px;
-	display: inline-block; 
-	margin: auto;
-	margin-bottom: 1rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
+	display: block; 
+	font-size: 64px;
+	font-weight: bold; 
+	text-align: center;
+	margin-left: 20%;
+	margin-right: 20%; 
 }
 
 a {
-	color:#3F1A08;
-	background-color: rgba(111,174,215,.9);
-	text-align: center;
-	font-size: 32px;
+	background-color: rgb(6,104,165); 
 	border-radius: 15px;
+	color:#3F1A08;
 	display: inline-block; 
-	margin: auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	text-decoration: none
+	font-size: 32px;
+	margin-top: 20px;
+	margin-bottom: 0px; 
+	margin-left: 250px;
+	opacity: .8;
+	padding: .5rem; 
+	text-align: center;
+	text-decoration: none;
+}
+a:hover {
+	opacity: 1; 
 }
 
 .word-girl {
-	display: inline-block;
-	padding-left: 35%;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	width: 50%;
-	height: 50%;
+	height: 400px;
+	position: absolute;
+	right: 100px;
+	top: 150px;
+	width: 500px;
+	z-index: -10;
+}
+
+form {
+	margin-top: 1rem;
 }
 
 form label {
 	background-color: rgba(111,174,215,.9);
+	border: 1px solid black;
+	border-radius: 5px; 
+	padding: .4rem;
+	margin-left: .5rem; 
+	margin-right: .5rem; 
 	text-align: center;
-	border-radius: 15px; 
-	padding-left: 1rem;
-	padding-right: 1rem;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
+}
+form input[type=number] {
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 10px; 
+  padding:5px 15px; 
+  background-color: rgb(191,187,178); 
+  border:1px solid black;
+  cursor:pointer;
+  -webkit-border-radius: 15px;
+  border-radius: 5px; 
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  color:#3F1A08;
+}
+
+.many-words {
+	display: inline-block;
+	margin-top: 10px;
+
+}
+
+input[type=text] {
+		display: inline-block;
+		margin-top: 5px;
+		margin-left: 10px; 
+    padding:5px 15px; 
+    background-color: rgb(191,187,178); 
+    border:1px solid black;
+    cursor:pointer;
+    -webkit-border-radius: 15px;
+    border-radius: 5px; 
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    color:#3F1A08;
+}
+
+input[type=submit] {
+		display: inline-block;
+		margin-top: 5px;
+		margin-left: 10px; 
+    padding:5px 15px 5px 15px; 
+    background-color: rgb(6,104,165); 
+    border:1px solid black;
+    cursor:pointer;
+    -webkit-border-radius: 15px;
+    border-radius: 5px; 
+    color:#BFBBB2;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+h2.results {
+	background-color: rgba(111,174,215,.9); 
+	border: 1px solid black;
+	border-radius: 5px; 
+	clear: both;
+	display: inline-block;
+	font-size: 32px; 
+	font-weight: bold; 
+	margin: 10px; 
+	padding: .4rem; 
+	text-align: center; 
+}
+
+.results-container {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	float: left; 
+	height: 100px;
+	width: 850px;
+}
+
+.results-item {
+
+	background-color: rgba(111,174,215,.9);
+	border: 1px solid black;
+	border-radius: 5px; 
+	display: inline-block;
+	font-size: 24px; 
+	height: 80px;
+	margin: 10px;
+	padding: .4rem;
+	text-align: left;
+	width: 210px;
+
 }

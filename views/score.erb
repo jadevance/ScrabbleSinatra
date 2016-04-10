@@ -1,24 +1,32 @@
-  <h1>Score One Word</h1>
+<header>
+  <h1 class="banner">Score One Word</h1>
   <nav>
-    <p><a href="/">Nevermind!</a></p>
-    <p><a href="/score-many">Score Many Words</a></p>
+    <p>
+      <a href="/">>> Nevermind!</a>
+      <a href="/score-many">>> Score Many Words</a>
+    </p>
   </nav>
+</header>
 
-  <form action="/score" method="post" accept-charset="utf-8">
-    <label for="scoring">Enter a word: </label>
-    <!-- Allowing up to 15 letters based on the average longest scrabble word -->
-    <input type="text" name="word" value="" id="scoring" required pattern="[A-Za-z]{1,15}" title="Enter up to 15 letters">
-    <input type="submit" value="Submit">
-  </form>
-  <br>
-  <br>
+<form action="/score" method="post" accept-charset="utf-8">
+  <label for="scoring">Enter a word</label>
+  <!-- scrabble boards are 15 x 15, so the longest playable word is 15 characters -->
+  <input type="text" name="word" value="" id="scoring" required pattern="[A-Za-z]{1,15}" title="Please enter up to 15 letters">
+  <input type="submit" value="Submit">
+</form>
+<br/>
+<br/>
 
 <% if @score %>
-  <h2>
-    Results: 
-  </h2>
-  <p>
-    Word: <%= @word %> <br>
-    Score: <%= @score %>
-  </p>
+  <h2 class="results">
+    Results 
+  </h2> <br /><br />
+  <div class="results-container"> 
+    <div class="results-item">
+      <p>
+        Word: <%= @word %> <br/>
+        Score: <%= @score %> <br/>
+      </p>
+    </div>
+  </div>
 <% end %>

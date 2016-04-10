@@ -1,36 +1,47 @@
-<h1>Score Many Words</h1>
-<nav>
-  <p><a href="/">Nevermind!</a></p>
-  <p><a href="/score">Score One Word</a></p>
-</nav>
-<br />
+<header>
+  <h1 class="banner">Score Many Words</h1>
+  <nav>
+    <p>
+      <a href="/">>> Nevermind!</a>
+      <a href="/score">>> Score One Word</a>
+    </p>
+  </nav>
+</header>
+
 
 <form action="/score-many" method="post">
-  <label for="number">Enter a number</label>
-  <input type="text" name="number" value="<%= params['number'] %>"/>
-  <input type="submit" />
+  <label for="number">Enter a number 1-10</label>
+  <input type="number" name="number" value="<%= params['number'] %>" required pattern="[0-9]" min="1" max="10"/>
+  <input class="submit-button"type="submit" />
 </form>
+<br />
 
 <% if ((params.has_key? 'number') && (params['number'] != '')) %>
   <form action="/score-many" method="post">
     <input type="hidden" name="number" value="<%= params['number'] %>" />
     <% params['number'].to_i.times do |i| %>
       <% field_name = "word-#{i}" %>
-      <label for="<%= field_name %>">Word <%= i+1 %></label>
-      <input type="text" name="<%= field_name %>" value="<%= params[field_name] %>" /><br />
+      <label class="many-words" for="<%= field_name %>">Word <%= i+1%></label>
+      <!-- scrabble boards are 15 x 15, so the longest playable word is 15 characters -->
+      <input type="text" name="<%= field_name %>" required pattern="[A-Za-z]{1,15}" title="Please enter only letters" value="<%= params[field_name] %>" /><br />
     <% end %>
-    <input type="submit" name="words" />
+    <br />
+    <input class="submit-button"type="submit" name="words" />
   </form>
 <% end %>
 
 <% if (params.has_key? 'words') %>
-    <h2>
-      Results: <br />
-    </h2>
+    <h2 class="results">
+      Results<br />
+    </h2> <br /><br />
+  <div class="results-container"> 
     <% @final_result.each do |i| %>
+    <div class="results-item">
       <p>
         Word: <%= i[0] %><br />
         Score: <%= i[1] %><br />
       </p> 
+    </div>
     <% end %>
+  </div>
 <% end %>

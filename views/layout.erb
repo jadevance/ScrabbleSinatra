@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- <link rel="stylesheet" type="css" href="stylesheets/styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
     <!-- for FF, Chrome, Opera -->
     <link rel="icon" type="image/png" href="./images/scrabble_icon.png" sizes="16x16">
     <link rel="icon" type="image/png" href="./images/scrabble_icon.png" sizes="32x32">
@@ -11,10 +12,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="./images/scrabble_icon.png"/>
   </head>
   <body>
-    <header>
-    </header>
     <main>
     <%= yield %>
+    <img class="word-girl" src="../images/wordgirl.png" alt="vector drawing of word girl">
     </main>
   </body>
 </html>
