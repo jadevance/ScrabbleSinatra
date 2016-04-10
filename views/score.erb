@@ -1,14 +1,24 @@
   <h1>Score One Word</h1>
+  <nav>
+    <p><a href="/">Nevermind!</a></p>
+    <p><a href="/score-many">Score Many Words</a></p>
+  </nav>
 
-  <form action="" method="post" accept-charset="utf-8">
+  <form action="/score" method="post" accept-charset="utf-8">
     <label for="scoring">Enter a word: </label>
-    <input type="text" name="word" value="" id="scoring" required pattern="[A-Za-z]{1,7}" title="Enter up to 7 letters">
+    <!-- Allowing up to 15 letters based on the average longest scrabble word -->
+    <input type="text" name="word" value="" id="scoring" required pattern="[A-Za-z]{1,15}" title="Enter up to 15 letters">
     <input type="submit" value="Submit">
   </form>
+  <br>
+  <br>
 
 <% if @score %>
-<h2>
-  Word: <%= @word.upcase %> <br>
-  Score: <%= @score %>
-</h2>
+  <h2>
+    Results: 
+  </h2>
+  <p>
+    Word: <%= @word %> <br>
+    Score: <%= @score %>
+  </p>
 <% end %>

@@ -1,0 +1,36 @@
+<h1>Score Many Words</h1>
+<nav>
+  <p><a href="/">Nevermind!</a></p>
+  <p><a href="/score">Score One Word</a></p>
+</nav>
+<br />
+
+<form action="/score-many" method="post">
+  <label for="number">Enter a number</label>
+  <input type="text" name="number" value="<%= params['number'] %>"/>
+  <input type="submit" />
+</form>
+
+<% if ((params.has_key? 'number') && (params['number'] != '')) %>
+  <form action="/score-many" method="post">
+    <input type="hidden" name="number" value="<%= params['number'] %>" />
+    <% params['number'].to_i.times do |i| %>
+      <% field_name = "word-#{i}" %>
+      <label for="<%= field_name %>">Word <%= i+1 %></label>
+      <input type="text" name="<%= field_name %>" value="<%= params[field_name] %>" /><br />
+    <% end %>
+    <input type="submit" name="words" />
+  </form>
+<% end %>
+
+<% if (params.has_key? 'words') %>
+    <h2>
+      Results: <br />
+    </h2>
+    <% @final_result.each do |i| %>
+      <p>
+        Word: <%= i[0] %><br />
+        Score: <%= i[1] %><br />
+      </p> 
+    <% end %>
+<% end %>
